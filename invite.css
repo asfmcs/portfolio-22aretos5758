@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Monda');
+body {background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SxyKBum7ion8fkbr/videoblocks-black-and-gold-abstract-low-poly-triangle-background_htdtozoum_thumbnail-full01.png");}
+body {font-family: 'Monda', sans-serif;}
+
+
+h1 {color: gold}
+h1 {position: absolute}
+h1 {top: 100px}
+h1 {left: 550px}
+
+
+
+.circle {position: absolute}
+.circle {right: 160px}
+.circle {top: 20px}
+
+.Location {float: right}
+.Location {width: 20%}
+.Location {z-index: 2}
+.Location {position: absolute}
+.Location {right: 210px}
+.Location {top: 150px}
+
+
+
+
+.circle2 {position: absolute}
+.circle2 {left: 160px}
+.circle2 {top: 20px}
+
+.info {float: left}
+.info {width: 20%}
+.info {z-index: 2}
+.info {position: absolute}
+.info {left: 216px}
+.info {top: 60px}
+
+
+
+
+.circle3 {position: absolute}
+.circle3 {left: 325px}
+.circle3 {top: 290px}
+
+.when {align:}
+.when {width: 100%}
+.when {z-index: 2}
+.when {position: absolute}
+.when {left: 383px}
+.when {top: 380px}
+
+
+h1 {text-align: center}
+
+p {text-align: center}
+
+h3 {text-align:center}
+h3 {color: rgb(194, 165, 0)}

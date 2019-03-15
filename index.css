@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {	font-family: 'Work Sans', sans-serif;}
+body {color:black}
+
+h1 {text-align: center}
+
+.navlogo {position: absolute}
+.navlogo {top: -33px}
+.navlogo {left: 50px}
+.navlogo {font-size: 48px}
+.navlogo {border-style: solid}
+
+
+.intro {text-align: center}
+.intro {text-decoration:underline}
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+body {
+	margin: 0;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+header {
+  background: #55d6aa;
+  
+}
+
+header::after {
+  content: '';
+  display: table;
+  clear: both;
+  
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+  
+}
+
+nav {
+  float: right;
+
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+
+.recipe {position: absolute;}
+.recipe {left: 20px}
+.recipe {top: 1086px}
+
+h2 {text-align:center}
+
+
+.travel {position: absolute}
+.travel {left: 20px}
+.travel {top :1526px}
+
+.blog {position: absolute}
+.blog {left: 720px}
+.blog {top: 1086px}
+
+.invite {position:absolute}
+.invite {left: 720px}
+.invite {top: 1526px}
+
+.encoded {position:absolute}
+.encoded {top: 337px}
+.encoded {right: 400}
+
+h3 {text-align:center}
+h3 {color: rgb(87, 87, 87)}

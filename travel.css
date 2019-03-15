@@ -1,0 +1,51 @@
+h1 {text-align: center ;}
+h1 {font-size: 50px;}
+h1 {font-family: 'Raleway', sans-serif;}
+
+h2 {font-size: 30px;}
+h2 {text-align: center;}
+h2 {border-style: groove}
+h2 {font-family: 'Raleway', sans-serif;}
+
+h3 {font-size:25px}
+h3 {font-family: 'Raleway', sans-serif;}
+
+.author {font-size: 20px;}
+.author {text-align: center ;}
+
+.what-a {text-align: justify;}
+
+.denali {float: right;}
+
+.denali-info {text-align: justify;}
+
+
+.glaciers {float: right;}
+
+.glacier-info {text-align: justify;}
+
+
+.borealis  {float: left}
+
+.aurora-info {text-align: justify;}
+
+
+p {font-size: 20px}
+p {font-family: 'Raleway', sans-serif;}
+
+.what-img {display: block;
+margin-left: auto;
+margin-right: auto;
+width: 60%;}
+
+ol {font-size: 20px;}
+ol {font-family: 'Raleway', sans-serif;}
+ol {text-align: justify;}
+
+ul {font-size: 20px;}
+ul {font-family: 'Raleway', sans-serif;}
+ul {text-align: justify;}
+
+.berries {float: right;}
+
+.salmon {float: right;}

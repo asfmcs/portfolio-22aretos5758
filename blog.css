@@ -1,0 +1,25 @@
+            body {font-family: monospace;}
+            body {font-size: 15px;}
+            body {text-align: center}
+            
+            h1 {color: rgb(180, 136, 67)}
+            h1 {text-decoration: underline;}
+            h1 {text-decoration: overline;}
+            h1 {text-shadow: 3px 2px rgb(119, 90, 44);}
+            // In this code for H1 I used text-shadow, a style code for the text to have a shadow which the color can be of your choosing.
+
+          
+            h2 {color: rgb(128, 128, 128);}
+            h2 {font: bold 2em ;}
+            
+            h4 {font-weight: bold;}
+            h4 {color: rgb(189, 136, 67)}
+            
+            p {line-height: 1.5em;}
+            p {font-style: italic;}
+
+            
+
+          
+            
+        
