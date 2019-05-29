@@ -1,0 +1,738 @@
+
+<html>
+<head>
+<title>CO9 Honors - PSet 3 Pacman Art Pt.3</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/ec071a764d83f34910ba21fab0b0f0cc20293542/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 400px;
+    height: 500px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>CO9 Honors - PSet 3 Pacman Art Pt.3</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    
+function start() {
+ background(getWidth(), getHeight(), Color.black);
+ 
+ //BLUE LINES
+ lines(getWidth(), 5, 0, 0);
+ lines(getWidth(), 5, 0, getHeight()-5);
+
+ lines(5, 150, 0, 0);
+ lines(5, 150, 0, getHeight()-150);
+ lines(5, 150, getWidth()-5, 0);
+ lines(5, 150, getWidth()-5, getHeight()-150);
+ 
+ lines(75, 5, 0, 150);
+ lines(75, 5, 0, 330);
+ lines(75, 5, getWidth()-75, 150);
+ lines(75, 5, getWidth()-75, 330);
+ 
+ lines(5, 55, 75, 150);
+ lines(5, 55, 75, 330-50);
+ lines(5, 55, getWidth()-75, 150);
+ lines(5, 55, getWidth()-75, 280);
+ 
+ lines(75, 5, 0, 200);
+ lines(75, 5, 0, 280);
+ lines(75, 5, getWidth()-75, 200);
+ lines(75, 5, getWidth()-75, 280);
+ 
+ 
+ lines(30, 5, 0, getHeight()- 70);
+ lines(30, 5, 0, getHeight()- 80);
+ lines(30, 5, getWidth()-25, getHeight()- 70);
+ lines(30, 5, getWidth()-25, getHeight()- 80);
+ 
+ lines(5, 15, getWidth()-30, getHeight()-80);
+ lines(5, 15, 30, getHeight()-80);
+ 
+ //UPPER SIDE BLUE SQUARES
+ 
+ //MIDLE SIDE
+ squares(15, 60, getWidth()/2 - 5, 5, Color.blue);
+ squares(5, 55, getWidth()/2 , 5, Color.black);
+
+ squares(100, 20, getWidth()/2 - 47, 95, Color.blue);
+ squares(15, 60, getWidth()/2 - 5, 95, Color.blue);
+ squares(90, 10, getWidth()/2 - 42, 100, Color.black);
+ squares(5, 50, getWidth()/2 , 100, Color.black);
+ 
+ 
+ 
+ //LEFT SIDE
+ squares(45, 30, 35, 35, Color.blue);
+ squares(35, 20, 40, 40, Color.black);
+ 
+ squares(45, 25, 35, 95, Color.blue);
+ squares(35, 15, 40, 100, Color.black);
+ 
+ squares(55, 30, 110, 35, Color.blue);
+ squares(45, 20, 115, 40, Color.black);
+ 
+ squares(15, 100, 110, 95, Color.blue);
+ squares(55, 15, 110, 140, Color.blue);
+ squares(5, 90, 115, 100, Color.black);
+ squares(45, 5, 115, 145, Color.black);
+ 
+ //RIGHT SIDE
+ squares(45, 30, getWidth() - 75, 35, Color.blue);
+ squares(35, 20, getWidth() - 70, 40, Color.black);
+ 
+ squares(45, 25, getWidth() - 75, 95, Color.blue);
+ squares(35, 15, getWidth() - 70, 100, Color.black);
+ 
+ squares(55, 30, getWidth() - 160, 35, Color.blue);
+ squares(45, 20, getWidth() - 155, 40, Color.black);
+ 
+ squares(15, 100, getWidth() - 120, 95, Color.blue);
+ squares(55, 15, getWidth() - 160, 140, Color.blue);
+ squares(5, 90, getWidth() - 115, 100, Color.black);
+ squares(45, 5, getWidth() - 155, 145, Color.black);
+ 
+ //LOWER SIDE BLUE SQUARES
+ 
+ //LEFT SIDE
+ squares(15, 55, 110, 280, Color.blue);
+ squares(5, 45, 115, 285, Color.black);
+ 
+ squares(55, 15, 110, 360, Color.blue);
+ squares(45, 5, 115, 365, Color.black);
+ 
+ squares(45, 15, 35, 360, Color.blue);
+ squares(15, 55, 65, 360, Color.blue);
+ squares(35, 5, 40, 365, Color.black);
+ squares(5, 45, 70, 365, Color.black);
+ 
+ squares(130, 15, 35, 440, Color.blue);
+ squares(15, 50, 110, 400, Color.blue);
+ squares(5, 40, 115, 405, Color.black);
+ squares(120, 5, 40, 445, Color.black);
+
+ squares(80, 40, 0, 222, Color.blue);
+ squares(70, 30, 5, 227, Color.black);
+ 
+ //RIGHT SIDE
+ squares(15, 55, getWidth() - 120, 280, Color.blue);
+ squares(5, 45,  getWidth() - 115, 285, Color.black);
+ 
+ squares(55, 15, getWidth() - 160, 360, Color.blue);
+ squares(45, 5, getWidth() - 155, 365, Color.black);
+ 
+ 
+ squares(45, 15, getWidth() - 75, 360, Color.blue);
+ squares(15, 55, getWidth() - 75, 360, Color.blue);
+ squares(35, 5, getWidth() - 70, 365, Color.black);
+ squares(5, 45, getWidth() - 70, 365, Color.black);
+
+ squares(130, 15, getWidth() - 165, 440, Color.blue);
+ squares(15, 50, getWidth() - 120, 400, Color.blue);
+ squares(5, 40, getWidth() - 115, 405, Color.black);
+ squares(120, 5, getWidth() - 160, 445, Color.black);
+ 
+ squares(80, 40, getWidth()-75, 222, Color.blue);
+ squares(65, 30, getWidth() - 70, 227, Color.black);
+ 
+ //MIDDLE AREA 
+ squares(100, 15, getWidth()/2 - 47, 320, Color.blue);
+ squares(15, 55, getWidth()/2 - 5, 320, Color.blue);
+ squares(90, 5, getWidth()/2 - 42, 325, Color.black);
+ squares(5, 45, getWidth()/2 , 325, Color.black);
+ 
+ squares(100, 15, getWidth()/2 - 47, 400, Color.blue);
+ squares(15, 55, getWidth()/2 - 5, 400, Color.blue);
+ squares(90, 5, getWidth()/2 - 42, 405, Color.black);
+ squares(5, 45, getWidth()/2 , 405, Color.black);
+ 
+ squares(100, 15, getWidth()/2 - 47, 280, Color.blue);
+ squares(90, 5, getWidth()/2 - 42, 285, Color.black);
+
+ squares(75, 15, getWidth()/2 - 37, 180, Color.blue);
+ squares(65, 5, getWidth()/2 - 32, 185, Color.black);
+ 
+ squares(15, 40, getWidth()/2 +80, 220, Color.blue);
+ squares(5, 30, getWidth()/2 +85, 225, Color.black);
+ 
+ squares(15, 40, getWidth()/2 -90, 220, Color.blue);
+ squares(5, 30, getWidth()/2 -85, 225, Color.black);
+ 
+ 
+ //GHOSTS
+ squares(100, 40, getWidth()/2 - 47, 220, Color.blue);
+ squares(90, 30, getWidth()/2 - 42, 225, Color.black);
+ 
+ drawGhost(getWidth()/2 - 2, getHeight()/2 - 35, Color.red);
+ drawGhost(getWidth()/2 - 25, getHeight()/2 , Color.cyan);
+ drawGhost(getWidth()/2 + 20, getHeight()/2 , Color.orange);
+ drawGhost(getWidth()/2 -2 , getHeight()/2 ,"#FFC0CB");
+
+//PEBBLES
+ pebbles(135,305);
+ pebbles(148,305);
+ pebbles(161,305);
+ pebbles(174,305);
+ pebbles(187,305);
+ pebbles(200,305);
+ pebbles(213,305);
+ pebbles(226,305);
+ pebbles(239,305);
+ pebbles(252,305);
+ pebbles(265,305);
+ //down
+ pebbles(265,318);
+ pebbles(265,331);
+ pebbles(265,345);
+ //left
+ pebbles(252,345);
+ pebbles(239,345);
+ pebbles(226,345);
+ //down
+ pebbles(226,358);
+ pebbles(226,371);
+ pebbles(226,384);
+ //right
+ pebbles(239,384);
+ pebbles(252,384);
+ pebbles(265,384);
+ //down
+ pebbles(265,399);
+ pebbles(265,412);
+ pebbles(265,425);
+ //left
+ pebbles(252,425);
+ pebbles(237,425);
+ pebbles(222,425);
+ //down
+ pebbles(222,437);
+ pebbles(222,449);
+ pebbles(222,462);
+ //right
+ pebbles(235,462);
+ pebbles(248,462);
+ pebbles(261,462);
+ pebbles(274,462);
+ pebbles(287,462);
+ pebbles(300,462);
+ pebbles(313,462);
+ pebbles(326,462);
+ pebbles(339,462);
+ pebbles(352,462);
+ pebbles(365,462);
+ pebbles(378,462);
+ //up
+ pebbles(378,449);
+ pebbles(378,437);
+ pebbles(378,423);
+ //left
+ pebbles(365,423);
+ 
+ 
+ pebbles(278,384);
+ pebbles(291,384);
+ 
+ //right
+ pebbles(278,345);
+ pebbles(291,345);
+ pebbles(304,345);
+ pebbles(317,345);
+ pebbles(330,345);
+ pebbles(343,345);
+ pebbles(356,345);
+ pebbles(369,345);
+ pebbles(380,345);
+ //down
+ pebbles(380,358);
+ pebbles(380,371);
+ powerpebbles(378,382);
+ //left
+ pebbles(367,384);
+ pebbles(353,384);
+ //down
+ pebbles(353,397);
+ pebbles(353,410);
+ pebbles(353,423);
+ //left
+ pebbles(340,423);
+ pebbles(325,423);
+ pebbles(309,423);
+ //up
+ pebbles(309,410);
+ pebbles(309,397);
+ pebbles(309,384);
+ pebbles(309,371);
+ pebbles(309,358);
+ pebbles(309,332);
+ pebbles(309,319);
+ pebbles(309,306);
+ pebbles(309,293);
+ pebbles(309,280);
+ pebbles(309,267);
+ pebbles(309,254);
+ pebbles(309,241);
+ pebbles(309,228);
+ pebbles(309,215);
+ pebbles(309,202);
+ pebbles(309,189);
+ pebbles(309,176);
+ pebbles(309,163);
+ pebbles(309,150);
+ pebbles(309,137);
+ pebbles(309,124);
+ pebbles(309,111);
+ pebbles(309,98);
+ pebbles(309,85);
+ pebbles(309,72);
+ pebbles(309,59);
+ pebbles(309,46);
+ pebbles(309,33);
+ pebbles(309,20);
+ //left
+ pebbles(296,20);
+ pebbles(281,20);
+ pebbles(268,20);
+ pebbles(255,20);
+ pebbles(240,20);
+ pebbles(225,20);
+ //down
+ pebbles(225,33);
+ pebbles(225,46);
+ pebbles(225,59);
+ pebbles(225,75);
+ //right
+ pebbles(238,75);
+ pebbles(251,75);
+ pebbles(264,75);
+ //down
+ pebbles(264,88);
+ pebbles(264,101);
+ pebbles(264,112);
+ pebbles(264,124);
+ //left
+ pebbles(251,124);
+ pebbles(238,124);
+ pebbles(225,124);
+ //down
+ pebbles(225,139);
+ pebbles(225,152);
+ pebbles(225,166);
+ //right
+ pebbles(238,166);
+ pebbles(250,166);
+ pebbles(265,166);
+ //down
+ pebbles(265,179);
+ pebbles(265,195);
+ pebbles(265,209);
+ //right
+ pebbles(278,206);
+ pebbles(294,206);
+ 
+ 
+ pebbles(265,222);
+ pebbles(265,235);
+ pebbles(265,248);
+ pebbles(265,263);
+ //right
+ pebbles(278,268);
+ pebbles(294,268);
+ 
+ pebbles(265,276);
+ pebbles(265,290);
+ 
+ 
+ pebbles(277,75);
+ pebbles(290,75);
+ //right
+ pebbles(322,20);
+ pebbles(335,20);
+ pebbles(349,20);
+ pebbles(364,20);
+ pebbles(378,20);
+ //down
+ pebbles(378,33);
+ pebbles(378,47);
+ pebbles(378,62);
+ powerpebbles(375,73);
+ //left
+ pebbles(365,76);
+ pebbles(352,76);
+ pebbles(339,76);
+ pebbles(326,76);
+ //down
+ pebbles(378,89);
+ pebbles(378,102);
+ pebbles(378,115);
+ pebbles(378,130);
+ //left
+ pebbles(365,130);
+ pebbles(352,130);
+ pebbles(339,130);
+ pebbles(326,130);
+ 
+ //right
+ pebbles(353- getWidth()/1.4-75,423);
+ 
+ 
+ 
+ 
+//MIRROR
+//right
+ pebbles(278- getWidth()/1.55,345);
+ pebbles(291- getWidth()/1.55,345);
+ pebbles(304- getWidth()/1.55,345);
+ pebbles(317- getWidth()/1.55,345);
+ pebbles(330- getWidth()/1.55,345);
+ pebbles(343- getWidth()/1.54,345);
+ pebbles(356- getWidth()/1.54,345);
+ pebbles(369- getWidth()/1.54,345);
+ pebbles(380- getWidth()/1.54,345);
+ pebbles(380- getWidth()/1.72,345);
+ pebbles(380- getWidth()/1.83,345);
+ pebbles(380- getWidth()/1.95,345);
+ 
+ pebbles(150,75);
+ pebbles(163,75);
+ pebbles(190,75);
+ pebbles(210,75);
+ 
+ pebbles(190,166);
+ pebbles(210,166);
+ 
+ pebbles(190,462);
+ pebbles(210,462);
+ 
+ pebbles(380- getWidth()/1.64,399);
+ pebbles(380- getWidth()/1.64,412);
+ pebbles(380- getWidth()/1.64,425);
+ pebbles(380- getWidth()/1.74,425);
+ pebbles(380- getWidth()/1.84,425);
+ pebbles(380- getWidth()/1.98,425);
+ pebbles(380- getWidth()/1.98,438);
+ pebbles(380- getWidth()/1.98,450);
+  
+ pebbles(380- getWidth()/1.95,358);
+ pebbles(380- getWidth()/1.95,371);
+ pebbles(380- getWidth()/1.95,384);
+ pebbles(380- getWidth()/2.1,384);
+ pebbles(380- getWidth()/2.24,384);
+ pebbles(380- getWidth()/2.38,384);
+ pebbles(380- getWidth()/1.83,384);
+ pebbles(380- getWidth()/1.72,384);
+ //left
+ pebbles(252,425);
+ pebbles(237- getWidth()/2,423);
+ pebbles(222- getWidth()/1.999,423);
+ //down
+ pebbles(222- getWidth()/2,437);
+ pebbles(222- getWidth()/2,449);
+ pebbles(222- getWidth()/2,462);
+ 
+//right
+ pebbles(235- getWidth()/2,462);
+ pebbles(248- getWidth()/2,462);
+ pebbles(261- getWidth()/2,462);
+ pebbles(274- getWidth()/2,462);
+ pebbles(287- getWidth()/2,462);
+ pebbles(300- getWidth()/2,462);
+ pebbles(313- getWidth()/2,462);
+ pebbles(326- getWidth()/2,462);
+ pebbles(339- getWidth()/2,462);
+ pebbles(352- getWidth()/2,462);
+ pebbles(365- getWidth()/2,462);
+ pebbles(378- getWidth()/2,462);
+//left
+
+ pebbles(296- getWidth()/3.3,20);
+ pebbles(281- getWidth()/3.3,20);
+ pebbles(268- getWidth()/3.3,20);
+ pebbles(255- getWidth()/3.3,20);
+ pebbles(240- getWidth()/3.3,20);
+ pebbles(225- getWidth()/3.3,20);
+//down
+ pebbles(225- getWidth()/8,33);
+ pebbles(225- getWidth()/8,46);
+ pebbles(225- getWidth()/8,59);
+ pebbles(225- getWidth()/8,75);
+ //right
+ pebbles(238- getWidth()/3.14,75);
+ pebbles(251- getWidth()/3.14,75);
+ pebbles(264- getWidth()/3.14,75);
+ //down
+ pebbles(264- getWidth()/3.14,88);
+ pebbles(264- getWidth()/3.14,101);
+ pebbles(264- getWidth()/3.14,112);
+ pebbles(264- getWidth()/3.14,124);
+//left
+ pebbles(251- getWidth()/5.4,124);
+ pebbles(238- getWidth()/5.4,124);
+ pebbles(225- getWidth()/5.4,124);
+ //down
+ pebbles(225- getWidth()/8.3,139);
+ pebbles(225- getWidth()/8.3,152);
+ pebbles(225- getWidth()/8.3,166);
+ //right
+ pebbles(238,166);
+ pebbles(250,166);
+ pebbles(265,166);
+ 
+ //down
+ pebbles(265- getWidth()/3.08,318);
+ pebbles(265- getWidth()/3.08,331);
+ pebbles(265- getWidth()/3.08,345);
+ //left
+ pebbles(252- getWidth()/3.08,345);
+ pebbles(239- getWidth()/3.08,345);
+ pebbles(226- getWidth()/3.08,345);
+ 
+ //right
+ pebbles(239- getWidth()/3.08,384);
+ pebbles(252- getWidth()/3.08,384);
+ pebbles(265- getWidth()/3.08,384);
+ 
+ //right
+ pebbles(238- getWidth()/3.94,166);
+ pebbles(250- getWidth()/4,166);
+ pebbles(265- getWidth()/4,166);
+ //down
+ pebbles(265- getWidth()/3.1,179);
+ pebbles(265- getWidth()/3.1,195);
+ pebbles(265- getWidth()/3.1,209);
+ 
+ //down
+ pebbles(380- getWidth()/1.4-75,358);
+ pebbles(380- getWidth()/1.4-75,371);
+ powerpebbles(378- getWidth()/1.4-75,382);
+ //left
+ pebbles(367- getWidth()/1.4-34,384);
+ pebbles(353- getWidth()/1.4-34,384);
+ //down
+ pebbles(353- getWidth()/1.4-20,397);
+ pebbles(353- getWidth()/1.4-20,410);
+ pebbles(353- getWidth()/1.4-20,423);
+ //left
+ pebbles(340- getWidth()/1.4+39,423);
+ pebbles(325- getWidth()/1.4+39,423);
+ pebbles(309- getWidth()/1.4+39,423);
+ 
+ pebbles(309- getWidth()/1.4+70,410);
+ pebbles(309- getWidth()/1.4+70,397);
+ pebbles(309- getWidth()/1.4+70,384);
+ pebbles(309- getWidth()/1.4+70,371);
+ pebbles(309- getWidth()/1.4+70,358);
+ pebbles(309- getWidth()/1.4+70,332);
+ pebbles(309- getWidth()/1.4+70,319);
+ pebbles(309- getWidth()/1.4+70,306);
+ pebbles(309- getWidth()/1.4+70,293);
+ pebbles(309- getWidth()/1.4+70,280);
+ pebbles(309- getWidth()/1.4+70,267);
+ pebbles(309- getWidth()/1.4+70,254);
+ pebbles(309- getWidth()/1.4+70,241);
+ pebbles(309- getWidth()/1.4+70,228);
+ pebbles(309- getWidth()/1.4+70,215);
+ pebbles(309- getWidth()/1.4+70,202);
+ pebbles(309- getWidth()/1.4+70,189);
+ pebbles(309- getWidth()/1.4+70,176);
+ pebbles(309- getWidth()/1.4+70,163);
+ pebbles(309- getWidth()/1.4+70,150);
+ pebbles(309- getWidth()/1.4+70,137);
+ pebbles(309- getWidth()/1.4+70,124);
+ pebbles(309- getWidth()/1.4+70,111);
+ pebbles(309- getWidth()/1.4+70,98);
+ pebbles(309- getWidth()/1.4+70,85);
+ pebbles(309- getWidth()/1.4+70,72);
+ pebbles(309- getWidth()/1.4+70,59);
+ pebbles(309- getWidth()/1.4+70,46);
+ pebbles(309- getWidth()/1.4+70,33);
+ pebbles(309- getWidth()/1.4+70,20);
+ 
+ pebbles(322- getWidth()/1.4-19,20);
+ pebbles(335- getWidth()/1.4-19,20);
+ pebbles(349- getWidth()/1.4-19,20);
+ pebbles(364- getWidth()/1.4-19,20);
+ pebbles(378- getWidth()/1.4-19,20);
+ 
+ pebbles(378- getWidth()/1.4-75,33);
+ pebbles(378- getWidth()/1.4-75,47);
+ pebbles(378- getWidth()/1.4-75,62);
+ powerpebbles(375- getWidth()/1.4-75,73);
+ 
+ pebbles(365- getWidth()/1.4-5,130);
+ pebbles(352- getWidth()/1.4-5,130);
+ pebbles(339- getWidth()/1.4-5,130);
+ pebbles(326- getWidth()/1.4-5,130);
+ 
+ pebbles(378- getWidth()/1.4-75,89);
+ pebbles(378- getWidth()/1.4-75,102);
+ pebbles(378- getWidth()/1.4-75,115);
+ pebbles(378- getWidth()/1.4-75,130);
+ 
+ pebbles(365- getWidth()/1.4-5,76);
+ pebbles(352- getWidth()/1.4-5,76);
+ pebbles(339- getWidth()/1.4-5,76);
+ pebbles(326- getWidth()/1.4-5,76);
+ 
+ //right
+ pebbles(278- getWidth()/2.35,206);
+ pebbles(294- getWidth()/2.35,206);
+ 
+ 
+ pebbles(265- getWidth()/3.1,222);
+ pebbles(265- getWidth()/3.1,235);
+ pebbles(265- getWidth()/3.1,248);
+ pebbles(265- getWidth()/3.1,263);
+ //right
+ pebbles(278- getWidth()/2.35,268);
+ pebbles(294- getWidth()/2.35,268);
+ 
+ pebbles(265- getWidth()/3.1,276);
+ pebbles(265- getWidth()/3.1,290);
+ 
+ 
+ pebbles(277,75);
+ pebbles(290,75);
+ 
+ 
+ drawPacman(200,270);
+}
+
+ //FUNCTIONS
+ 
+
+
+function drawPacman(x, y){
+    var circle = new Circle(7);
+    circle.setColor(Color.yellow);
+    circle.setPosition(x,y);
+    add(circle);
+    
+    var mouth = new Arc(7,50, 120, 0);
+    mouth.setRotation(90);
+    mouth.setPosition(x,y);
+    mouth.setColor(Color.black);
+    add(mouth);
+    
+    var eye = new Circle(1);
+    eye.setColor(Color.black);
+    eye.setPosition(x +2, y -4);
+    add(eye);
+}
+function background (width, height, color){
+    var background = new Rectangle(width, height);
+    background.setColor(color);
+    add(background);
+}
+
+function lines(length, height, x, y){
+    var lines = new Rectangle(length, height);
+    lines.setColor(Color.blue);
+    lines.setPosition(x,y);
+    add(lines);
+}
+
+function squares(length, height, x, y, color){
+    var squares = new Rectangle(length,height);
+    squares.setColor(color);
+    squares.setPosition (x,y);
+    add(squares);
+}
+
+function pebbles (x,y){
+    var pebbles = new Rectangle (3.5,3.5);
+    pebbles.setPosition(x,y);
+    pebbles.setColor("#ffff4c");
+    add(pebbles);
+}
+
+function powerpebbles (x,y){
+    var pebbles = new Rectangle (10,10);
+    pebbles.setPosition(x,y);
+    pebbles.setColor("#ffff4c");
+    add(pebbles);
+}
+
+function drawGhost(x, y, color){
+    var ghost = new Rectangle (12, 10);
+    ghost.setColor(color);
+    ghost.setPosition(x, y);
+    add(ghost);
+    
+    var head = new Circle (6);
+    head.setColor(color);
+    head.setPosition(x + 6,y);
+    add(head);
+    
+    var tail1 = new Circle(2);
+    tail1.setColor(color);
+    tail1.setPosition(x + 2, y +10);
+    add(tail1);
+    
+    var tail2 = new Circle(2);
+    tail2.setColor(color);
+    tail2.setPosition(x + 6, y +10);
+    add(tail2);
+    
+    var tail3 = new Circle(2);
+    tail3.setColor(color);
+    tail3.setPosition(x + 10, y +10);
+    add(tail3);
+    
+    var eye1 = new Circle(2.5);
+    eye1.setColor(Color.white);
+    eye1.setPosition(x + 3,y);
+    add(eye1);
+    
+    var eye2 = new Circle(2.5);
+    eye2.setColor(Color.white);
+    eye2.setPosition(x + 8,y);
+    add(eye2);
+    
+     var eye1 = new Circle(1);
+    eye1.setColor(Color.blue);
+    eye1.setPosition(x + 3,y);
+    add(eye1);
+    
+    var eye2 = new Circle(1);
+    eye2.setColor(Color.blue);
+    eye2.setPosition(x + 8,y);
+    add(eye2);
+}
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>
